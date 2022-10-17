@@ -29,6 +29,7 @@ public class CharacterController2D : MonoBehaviour
 
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
+	private bool didDoubleJump = false;
 
 	private void Awake()
 	{
@@ -58,6 +59,10 @@ public class CharacterController2D : MonoBehaviour
 					OnLandEvent.Invoke();
 			}
 		}
+		if(m_Grounded)
+		{
+			didDoubleJump = false;
+		}
 	}
 
 
@@ -76,7 +81,6 @@ public class CharacterController2D : MonoBehaviour
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
-
 			// If crouching
 			if (crouch)
 			{
@@ -124,11 +128,15 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
-		{
+		if (m_Grounded && jump) {
 			// Add a vertical force to the player.
 			m_Grounded = false;
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			m_Rigidbody2D.velocity = Vector2.up * m_JumpForce;
+		} else {
+			if(jump && !didDoubleJump) {
+				m_Rigidbody2D.velocity = Vector2.up * m_JumpForce;
+				didDoubleJump = true;
+			}
 		}
 	}
 
