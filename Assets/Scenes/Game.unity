@@ -237,7 +237,6 @@ GameObject:
   - component: {fileID: 187034920}
   - component: {fileID: 187034924}
   - component: {fileID: 187034923}
-  - component: {fileID: 187034925}
   - component: {fileID: 187034926}
   m_Layer: 0
   m_Name: Player
@@ -287,7 +286,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9e01528b165433f4e8a82ea8249dc71c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8e0c36b897d3ec479c060f06fb6c4ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -306,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187034917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.96, y: -2.133, z: -2.7635}
+  m_LocalPosition: {x: -1.96, y: 0, z: -2.7635}
   m_LocalScale: {x: 0.67296, y: 0.67296, z: 0.67296}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -363,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d754320f1107df4a95ce4b6f134e08a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 800
+  m_JumpForce: 20
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -379,70 +378,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!68 &187034925
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187034917}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 5da8918ad5269b24497781ebbc5a2381, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 1.150125, y: -0.14840364}
-  - {x: 1.0942081, y: -0.08196659}
-  - {x: 1.0045586, y: -0.023731083}
-  - {x: 0.97690207, y: 0.34081706}
-  - {x: 0.8257796, y: 0.5741389}
-  - {x: 0.66429913, y: 0.72421765}
-  - {x: 0.4812058, y: 0.84079885}
-  - {x: 0.19318222, y: 0.90821123}
-  - {x: 0.29669392, y: 1.04895}
-  - {x: 0.44153032, y: 1.1446801}
-  - {x: 0.5625686, y: 1.1696607}
-  - {x: 0.6899988, y: 1.1438005}
-  - {x: 0.9348283, y: 1.0291495}
-  - {x: 1.1270223, y: 0.8358542}
-  - {x: 1.2393092, y: 0.63849026}
-  - {x: 1.2761822, y: 0.64040476}
-  - {x: 1.2217898, y: 0.7741737}
-  - {x: 1.0771106, y: 0.96954226}
-  - {x: 0.8417355, y: 1.162795}
-  - {x: 0.5244195, y: 1.2343224}
-  - {x: 0.28285915, y: 1.1418793}
-  - {x: 0.10681036, y: 0.90037304}
-  - {x: -0.059475034, y: 0.8762003}
-  - {x: -0.124299705, y: 0.97138774}
-  - {x: -0.30527127, y: 1.0992776}
-  - {x: -0.5627129, y: 1.07687}
-  - {x: -0.6804091, y: 0.92035043}
-  - {x: -0.64112645, y: 0.50175136}
-  - {x: -0.7485669, y: 0.21370298}
-  - {x: -0.90030885, y: 0.1873861}
-  - {x: -1.0794677, y: 0.01266624}
-  - {x: -1.1444176, y: -0.1915608}
-  - {x: -1.1167474, y: -0.4226117}
-  - {x: -1.2340183, y: -0.59392923}
-  - {x: -1.287119, y: -0.8731889}
-  - {x: -1.1502845, y: -1.1295264}
-  - {x: -1.1843046, y: -1.2470175}
-  - {x: 1.2736764, y: -1.2578964}
-  - {x: 1.2917813, y: -0.879541}
-  - {x: 1.23236, y: -0.7887676}
-  - {x: 1.2946256, y: -0.65213233}
-  - {x: 1.2896712, y: -0.46813965}
-  - {x: 1.1919186, y: -0.20511515}
-  - {x: 1.1324625, y: -0.12013628}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!70 &187034926
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -456,8 +391,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.042875204, y: -0.15924765}
-  m_Size: {x: 2.0632555, y: 2.0632555}
+  m_Offset: {x: -0.27203423, y: 0.30721688}
+  m_Size: {x: 2.042939, y: 3.6902275}
   m_Direction: 0
 --- !u!1001 &209626578
 PrefabInstance:
@@ -976,7 +911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262938204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.552, z: 0}
+  m_LocalPosition: {x: -0.23, y: 2.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6133,7 +6068,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949196561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.04, z: 0}
+  m_LocalPosition: {x: -0.25, y: -1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
