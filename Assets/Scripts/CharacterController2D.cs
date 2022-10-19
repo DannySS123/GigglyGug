@@ -58,11 +58,7 @@ public class CharacterController2D : MonoBehaviour {
         }
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl) {
-            if (crouch) {
-                playerIsCrouching();
-                // Reduce the speed by the crouchSpeed multiplier
-                move *= m_CrouchSpeed;
-            }
+            if (crouch) playerIsCrouching(move);
             else playerIsNotCrouching();
             movePlayer(move);
             correctPlayerFacing(move);
@@ -92,11 +88,13 @@ public class CharacterController2D : MonoBehaviour {
             }
         }
     }
-    private void playerIsCrouching() {
+    private void playerIsCrouching(float move) {
         if (!m_wasCrouching) {
             m_wasCrouching = true;
             OnCrouchEvent.Invoke(true);
         }
+        // Reduce the speed by the crouchSpeed multiplier
+        move *= m_CrouchSpeed;
         // Disable one of the colliders when crouching
         if (m_CrouchDisableCollider != null) {
             m_CrouchDisableCollider.enabled = false;
