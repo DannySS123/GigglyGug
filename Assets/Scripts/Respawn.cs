@@ -15,4 +15,10 @@ public class Respawn : MonoBehaviour {
             transform.position = respawnPosition.transform.position;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Monster"){
+            transform.position = respawnPosition.transform.position;
+        }
+    }
 }
