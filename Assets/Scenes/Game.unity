@@ -673,6 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   coinText: {fileID: 1548283161}
+  audioClip: {fileID: 8300000, guid: 0301c27196f142245ad5762490a74b49, type: 3}
 --- !u!1001 &209626578
 PrefabInstance:
   m_ObjectHideFlags: 0

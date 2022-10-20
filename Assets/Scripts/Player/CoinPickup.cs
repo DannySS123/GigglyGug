@@ -7,6 +7,7 @@ public class CoinPickup : MonoBehaviour
 {
     public int coins = 0;
     public TextMeshProUGUI coinText;
+    public AudioClip audioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class CoinPickup : MonoBehaviour
             Destroy(other.gameObject);
             coins++;
             coinText.text = "Coins: " + coins;
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
             Debug.Log("Picked Up");
         }
     }
