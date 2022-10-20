@@ -68,7 +68,7 @@ public class CharacterController2D : MonoBehaviour {
             correctPlayerFacing(move);
         }
         if (m_Grounded && jump) {
-            m_Grounded = false;
+            m_Grounded = true;
             doJump();
         } else if (jump && !didDoubleJump) {
             doJump();
