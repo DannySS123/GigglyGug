@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1938644458080095193}
   - component: {fileID: 1938644458080095187}
   - component: {fileID: -2419002904792455482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rat-black
   m_TagString: Monster
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 854709984819347149}
   - component: {fileID: 854709984819347150}
   - component: {fileID: 854709984819347136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ploop
   m_TagString: Monster
   m_Icon: {fileID: 0}
