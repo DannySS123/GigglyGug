@@ -53,8 +53,12 @@ public class CharacterController2D : MonoBehaviour {
         // If crouching, check to see if the character can stand up
         if (!crouch) {
             // If the character has a ceiling preventing them from standing up, keep them crouching
+
             if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround)) {
-                crouch = true;
+                Collider2D collider = Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround);
+                if(collider.attachedRigidbody != null){
+                    crouch = true;
+                }
             }
         }
         //only control the player if grounded or airControl is turned on
@@ -87,7 +91,7 @@ public class CharacterController2D : MonoBehaviour {
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         foreach (Collider2D collider in colliders) {
-            if (collider.gameObject != gameObject) {
+            if (collider.gameObject != gameObject && collider.gameObject.tag != "Respawn") {
                 m_Grounded = true;
                 if (!wasGrounded) OnLandEvent.Invoke();
             }
