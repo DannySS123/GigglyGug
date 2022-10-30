@@ -30,6 +30,7 @@ public class CharacterController2D : MonoBehaviour {
     public BoolEvent OnCrouchEvent;
     private bool m_wasCrouching = false;
     private bool didDoubleJump = false;
+    public bool isBootsPickedUp = false;
 
     private void Awake() {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -75,7 +76,7 @@ public class CharacterController2D : MonoBehaviour {
         if (m_Grounded && jump) {
             m_Grounded = true;
             doJump();
-        } else if (jump && !didDoubleJump) {
+        } else if (jump && !didDoubleJump && isBootsPickedUp) {
             doJump();
             didDoubleJump = true;
         }
