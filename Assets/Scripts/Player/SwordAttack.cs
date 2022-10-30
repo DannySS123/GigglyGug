@@ -12,10 +12,12 @@ public class SwordAttack : MonoBehaviour
     public LayerMask enemyLayers;
     private bool canAttack = true;
 
+    public bool isSwordPickedUp = false;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canAttack) {
+        if (Input.GetKeyDown(KeyCode.Space) && canAttack && isSwordPickedUp) {
             Attack();
         }
     }
