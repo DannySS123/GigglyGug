@@ -8,6 +8,7 @@ TagManager:
   - Monster
   - Sword
   - Boots
+  - NextLevel
   layers:
   - Default
   - TransparentFX
