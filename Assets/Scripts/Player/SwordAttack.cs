@@ -11,12 +11,16 @@ public class SwordAttack : MonoBehaviour
     public float attackTime = 0.5f;
     public LayerMask enemyLayers;
     private bool canAttack = true;
+    public bool isSwordPickedUp = false;
+    public AudioClip killAudioClip;
+    public AudioClip attackAudioClip;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canAttack) {
+        if (Input.GetKeyDown(KeyCode.Space) && canAttack && isSwordPickedUp) {
             Attack();
+            AudioSource.PlayClipAtPoint(attackAudioClip, transform.position);
         }
     }
 
@@ -32,6 +36,7 @@ public class SwordAttack : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("HIT");
             Destroy(enemy.gameObject);
+            AudioSource.PlayClipAtPoint(killAudioClip, transform.position);
         }
     }
 
