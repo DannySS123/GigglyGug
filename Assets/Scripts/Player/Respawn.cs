@@ -11,7 +11,7 @@ public class Respawn : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (transform.position.y < -10) {
+        if (transform.position.y < -20) {
             RespawnPlayer();
         }
     }

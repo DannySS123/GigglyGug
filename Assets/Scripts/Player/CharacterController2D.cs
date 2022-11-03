@@ -57,7 +57,7 @@ public class CharacterController2D : MonoBehaviour {
 
             if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround)) {
                 Collider2D collider = Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround);
-                if(collider.attachedRigidbody != null){
+                if(collider.gameObject.tag != "Respawn"){
                     crouch = true;
                 }
             }
