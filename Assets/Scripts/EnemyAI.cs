@@ -20,7 +20,6 @@ public class EnemyAI : MonoBehaviour {
     void Start() {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
         InvokeRepeating("updatePath", 0f, 0.5f);
     }
 
@@ -52,12 +51,6 @@ public class EnemyAI : MonoBehaviour {
 
     void FixedUpdate() {
         if(path == null || currentWaypoint >= path.vectorPath.Count) return;
-        // if(currentWaypoint >= path.vectorPath.Count) {
-        //     reachedEndOfPath = true;
-        //     return;
-        // } else {
-        //     reachedEndOfPath = false;
-        // }
         moveMonster();
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
