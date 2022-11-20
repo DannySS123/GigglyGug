@@ -9,7 +9,19 @@ public class Respawn : MonoBehaviour {
     public int lives = 3;
     public TextMeshProUGUI livesText;
 
+    public GameObject[] mobs;
+
+    public Transform[] mobSpawnPoints;
+
+    private GameObject[] mobReferences;
+
     // Update is called once per frame
+
+    void Start() {
+        mobReferences = new GameObject[mobs.Length];
+        ReSpawnMobs();
+        Debug.Log($"Size of mobs: {mobs}");
+    }
     void Update() {
         if (transform.position.y < -20) {
             RespawnPlayer();
@@ -27,5 +39,21 @@ public class Respawn : MonoBehaviour {
         AudioSource.PlayClipAtPoint(audioClip, transform.position);
         lives--;
         livesText.text = "Lives: " + lives;
+        DestoryMobs();
+        ReSpawnMobs();
+    }
+
+    public void ReSpawnMobs() {
+        for(int i = 0; i < mobs.Length; i++) {
+            mobReferences[i] = Instantiate(mobs[i], mobSpawnPoints[i].position, mobSpawnPoints[i].rotation);
+        }
+    }
+
+    public void DestoryMobs() {
+        for(int i = 0; i < mobs.Length; i++) {
+            if(mobReferences[i] != null) {
+                Destroy(mobReferences[i]);
+            }
+        }
     }
 }

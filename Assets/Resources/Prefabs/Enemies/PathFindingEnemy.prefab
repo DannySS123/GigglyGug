@@ -94,7 +94,7 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 400
   nextWayPointDistance: 3
-  checkDistance: 200
+  checkDistance: 25
 --- !u!50 &5536544788528039734
 Rigidbody2D:
   serializedVersion: 4
