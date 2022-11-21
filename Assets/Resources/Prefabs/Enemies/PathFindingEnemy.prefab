@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5536544788528039735}
   - component: {fileID: 5536544788528039734}
   - component: {fileID: 3597773054329828068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PathFindingEnemy
   m_TagString: Monster
   m_Icon: {fileID: 0}
