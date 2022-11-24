@@ -29,7 +29,8 @@ public class EnemyWalking : MonoBehaviour
             transform.localScale = theScale;
             direction *= -1;
         }
-        transform.position += new Vector3(direction * speed * Time.deltaTime * (float)Math.Cos(alpha), direction * speed * Time.deltaTime * (float)Math.Sin(alpha), 0);
+        
+        transform.position += new Vector3(direction * speed * Time.deltaTime * (float)Math.Cos(alpha), (alpha<180 ? -1:1) * direction * speed * Time.deltaTime * (float)Math.Sin(alpha), 0);
     }
 
     bool crossedTheBoundary(){
