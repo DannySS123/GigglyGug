@@ -5,14 +5,13 @@ using TMPro;
 
 public class CoinPickup : MonoBehaviour
 {
-    public int coins = 0;
+    public static int coins = 0;
     public TextMeshProUGUI coinText;
     public AudioClip audioClip;
 
     // Start is called before the first frame update
     void Start()
     {
-        coins = 0;
         coinText.text = "Coins: " + coins;
     }
 
