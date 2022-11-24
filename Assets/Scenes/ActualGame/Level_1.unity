@@ -202,7 +202,7 @@ Transform:
   m_GameObject: {fileID: 48757577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -9.1, z: 0}
-  m_LocalScale: {x: 8.1, y: 8.1, z: 8.1}
+  m_LocalScale: {x: 8.2, y: 8.2, z: 8.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1486340650}
@@ -619,9 +619,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1126251647
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3dfcd3be3f76632469966e4d1a1e635a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -641,7 +641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187034917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.1, y: -6.6, z: -2.7635}
+  m_LocalPosition: {x: -33.5, y: -6.58, z: -2.7635}
   m_LocalScale: {x: 0.67296, y: 0.67296, z: 0.67296}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -773,7 +773,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPosition: {fileID: 1732593761}
   audioClip: {fileID: 8300000, guid: cdbae34aaee7786429beb3c6f0723b6d, type: 3}
-  lives: 3
   livesText: {fileID: 638575230}
   mobs:
   - {fileID: 854709984819347148, guid: f4b799d64ab56da4f845bc24317c50a7, type: 3}
@@ -817,7 +816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a3af47140322b46b7da6410a8475e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
   coinText: {fileID: 262930774}
   audioClip: {fileID: 8300000, guid: 0301c27196f142245ad5762490a74b49, type: 3}
 --- !u!70 &187034932

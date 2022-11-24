@@ -6,7 +6,7 @@ using UnityEngine;
 public class Respawn : MonoBehaviour {
     public GameObject respawnPosition;
     public AudioClip audioClip;
-    public int lives = 3;
+    public static int lives = 3;
     public TextMeshProUGUI livesText;
 
     public GameObject[] mobs;
@@ -18,6 +18,7 @@ public class Respawn : MonoBehaviour {
     // Update is called once per frame
 
     void Start() {
+        livesText.text = "Lives: " + lives;
         mobReferences = new GameObject[mobs.Length];
         ReSpawnMobs();
         Debug.Log($"Size of mobs: {mobs}");
