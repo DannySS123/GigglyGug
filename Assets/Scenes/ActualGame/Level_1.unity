@@ -459,6 +459,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60e10becc91cdc488b6f96b7aacf54a, type: 3}
+--- !u!114 &106054407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1604018687088942795, guid: fc6539b333aa8d940b093760b9f73f09, type: 3}
+  m_PrefabInstance: {fileID: 468629495358501030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &139363944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2256,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4359236280255050, guid: 527cab527cab11b46bec512eb84237e3, type: 3}
   m_PrefabInstance: {fileID: 603479004}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1398404782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7693901980789719299, guid: fc6539b333aa8d940b093760b9f73f09, type: 3}
+  m_PrefabInstance: {fileID: 468629495358501030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1401756407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32641,6 +32663,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3490925292956630137, guid: 9d7b0219c7d92f54daaabe891bcd2724, type: 3}
+      propertyPath: fpsText
+      value: 
+      objectReference: {fileID: 1398404782}
+    - target: {fileID: 3490925292956630137, guid: 9d7b0219c7d92f54daaabe891bcd2724, type: 3}
+      propertyPath: timeText
+      value: 
+      objectReference: {fileID: 106054407}
     - target: {fileID: 4672902845855116608, guid: 9d7b0219c7d92f54daaabe891bcd2724, type: 3}
       propertyPath: livesText
       value: 
@@ -32749,6 +32779,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8198155024887658468, guid: 9d7b0219c7d92f54daaabe891bcd2724, type: 3}
+      propertyPath: fpsText
+      value: 
+      objectReference: {fileID: 1398404782}
+    - target: {fileID: 8198155024887658468, guid: 9d7b0219c7d92f54daaabe891bcd2724, type: 3}
+      propertyPath: timeText
+      value: 
+      objectReference: {fileID: 106054407}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d7b0219c7d92f54daaabe891bcd2724, type: 3}
 --- !u!1001 &7386777170618869492

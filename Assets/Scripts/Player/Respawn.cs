@@ -6,7 +6,7 @@ using UnityEngine;
 public class Respawn : MonoBehaviour {
     public GameObject respawnPosition;
     public AudioClip audioClip;
-    public static int lives = 3;
+    
     public TextMeshProUGUI livesText;
 
     public GameObject[] mobs;
@@ -18,7 +18,7 @@ public class Respawn : MonoBehaviour {
     // Update is called once per frame
 
     void Start() {
-        livesText.text = "Lives: " + lives;
+        livesText.text = "Lives: " + PlayerStats.lives;
         mobReferences = new GameObject[mobs.Length];
         ReSpawnMobs();
         Debug.Log($"Size of mobs: {mobs}");
@@ -38,8 +38,8 @@ public class Respawn : MonoBehaviour {
     void RespawnPlayer() {
         transform.position = respawnPosition.transform.position;
         AudioSource.PlayClipAtPoint(audioClip, transform.position);
-        lives--;
-        livesText.text = "Lives: " + lives;
+        PlayerStats.lives--;
+        livesText.text = "Lives: " + PlayerStats.lives;
         DestoryMobs();
         ReSpawnMobs();
     }
