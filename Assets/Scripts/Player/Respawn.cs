@@ -21,7 +21,7 @@ public class Respawn : MonoBehaviour {
         livesText.text = "Lives: " + PlayerStats.lives;
         mobReferences = new GameObject[mobs.Length];
         ReSpawnMobs();
-        Debug.Log($"Size of mobs: {mobs}");
+        Debug.Log($"Number of mobs: {mobs.Length}");
     }
     void Update() {
         if (transform.position.y < -20) {
