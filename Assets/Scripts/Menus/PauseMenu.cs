@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,11 +8,13 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public TextMeshProUGUI levelText;
 
     public void BackToMenu() 
     {
         Time.timeScale = 1f;
         PlayerStats.resetStats();
+        LevelStartText.level = 1;
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 
@@ -53,6 +56,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart() {
         Resume();
+        LevelStartText.level = 1;
         PlayerStats.resetStats();
         SceneManager.LoadScene("Level_1", LoadSceneMode.Single);
     }
