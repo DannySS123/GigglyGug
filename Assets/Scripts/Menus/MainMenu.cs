@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1f;
         if(SceneManager.GetActiveScene().buildIndex == 4) {
             PlayerStats.resetStats();
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         } else {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
