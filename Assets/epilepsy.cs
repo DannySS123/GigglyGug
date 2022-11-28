@@ -1,11 +1,14 @@
-
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class epilepsy : MonoBehaviour
 {
-    GameObject bg;
     Image image;
+
+    public TextMeshProUGUI text;
+
+
 
     Color[] colors = { 
         new Color(0.47451f, 0.83137f, 0.81569f, 1.0f), //Blue
@@ -22,7 +25,8 @@ public class epilepsy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    
+        int score = PlayerStats.coins * 50 + PlayerStats.lives * 20 - PlayerStats.hour * 200 - PlayerStats.min * 200/60;
+        text.text = "Score: " + score.ToString();
         image = GetComponent<Image>();
         InvokeRepeating("changeBackground",0.0f,0.15f);
     }
