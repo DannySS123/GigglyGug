@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-
     public static int coins = 0;
     public static int lives = 3;
-
     public static float timer = 0;
     public static int hour = 0;
     public static int min = 0;
@@ -18,12 +16,6 @@ public class PlayerStats : MonoBehaviour
 
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI fpsText;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -38,7 +30,7 @@ public class PlayerStats : MonoBehaviour
             min = 0;
             hour++;
         }
-        timeText.text = "Time: " + (hour == 0 ? "" : (hour + ":")) + (min == 0 ? "" : (min + ":")) + sec;
+        timeText.text = stringifyTime();
 
         if (fpsTimer == 100) {
              fps = (int)(1f / Time.unscaledDeltaTime);
@@ -46,5 +38,17 @@ public class PlayerStats : MonoBehaviour
             fpsTimer = 0;
         }
         fpsTimer++;
+    }
+
+    public static string stringifyTime() => "Time: " + (hour == 0 ? "" : (hour + ":" + (min > 9 ? "" : "0")))
+                                                     + (min == 0 ? "" : (min + ":" + (sec > 9 ? "" : "0"))) + sec;
+
+    public static void resetStats() {
+        lives = 3;
+        coins = 0;
+        timer = 0;
+        hour = 0;
+        min = 0;
+        sec = 0;
     }
 }
