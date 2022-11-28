@@ -8,9 +8,12 @@ public class MainMenu : MonoBehaviour
     public void PlayGame() 
     {
         Time.timeScale = 1f;
-        if(SceneManager.GetActiveScene().buildIndex == 4)
+        if(SceneManager.GetActiveScene().buildIndex == 4) {
+            PlayerStats.resetStats();
             SceneManager.LoadScene(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        } else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     public void QuitGame() 

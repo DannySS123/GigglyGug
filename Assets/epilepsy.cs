@@ -5,10 +5,8 @@ using UnityEngine.UI;
 public class epilepsy : MonoBehaviour
 {
     Image image;
-
-    public TextMeshProUGUI text;
-
-
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI statsText;
 
     Color[] colors = { 
         new Color(0.47451f, 0.83137f, 0.81569f, 1.0f), //Blue
@@ -26,7 +24,8 @@ public class epilepsy : MonoBehaviour
     void Start()
     {
         int score = PlayerStats.coins * 50 + PlayerStats.lives * 20 - PlayerStats.hour * 200 - PlayerStats.min * 200/60;
-        text.text = "Score: " + score.ToString();
+        scoreText.text = $"Score: {score}";
+        statsText.text = $"Coins: {PlayerStats.coins}\nLives: {PlayerStats.lives}\n{PlayerStats.stringifyTime()}";
         image = GetComponent<Image>();
         InvokeRepeating("changeBackground",0.0f,0.15f);
     }

@@ -52,12 +52,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart() {
         Resume();
-        PlayerStats.lives = 3;
-        PlayerStats.coins = 0;
-        PlayerStats.timer = 0;
-        PlayerStats.hour = 0;
-        PlayerStats.min = 0;
-        PlayerStats.sec = 0;
+        PlayerStats.resetStats();
         SceneManager.LoadScene("Level_1", LoadSceneMode.Single);
     }
 }
