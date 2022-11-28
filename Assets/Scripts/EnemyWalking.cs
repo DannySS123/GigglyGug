@@ -29,7 +29,6 @@ public class EnemyWalking : MonoBehaviour
             transform.localScale = theScale;
             direction *= -1;
         }
-        Debug.Log(alpha);
         transform.position += new Vector3(direction * speed * Time.deltaTime * (float)Math.Cos(alpha), direction * speed * Time.deltaTime * (float)Math.Sin(2*alpha), 0);
     }
 
