@@ -5,9 +5,17 @@ menü:
 karakter: kép A karakter rajzát mi készítettük el, egy az interneten talált kép
  felhasználásával, amihez testet, illetve lábakat rajzoltunk.
 
+mozgás:
+
 karakter animációja
 
 
+kamera:
+a kamerát úgy akartuk, hogy játékos központú legyen, tehát a játékos mindig a képernyő központjába kerüljön
+Ehhez a hierarchiában a player alá kellett tenni.
+Emellett szerettük volna, ha a képernyőn emellett látszódnak az összegyűjtött
+eszközök, coinok, az eltelt idő, az életek száma.
+Ehhez egy canvas-t használtunk, aminek átlátszóan hagytuk a hátterét.
 pálya: A pályához egy tilemap-et használtunk, amihez a tile-okat egy letöltött assetből
 szereztük meg. Link. A pályák kialakításánál fő szempont volt, hogy minél változatosabban
 használjuk a meglévő elemeket, hogy ne legyen egysíkú a játék.
@@ -25,7 +33,8 @@ Képek
 Mozgó szörny: egyenletesen mozog balra-jobbra, illetve akár lejtőn/ emelkedőn is tud mozogni, 
 amihez a dőlésszögét kell beállítani. Egy hozzá tartozó scripttel mozog, amiben minden frameben egy kicsit odébb rakja a szörnyet,
 illetve ha elér a kezdőpontjától egy bizonyos távolságot, akkor visszafordul, és visszafelé megy egészen a kezdőpontig
-Követő szörny:
+Követő szörny: todo
+
 
 Checkpointok:
 A képe egy asset store-ból szerzett prefab
@@ -53,4 +62,10 @@ a játékos visszakerüléséhez szükség volt egy respawnPosition-ra, és ha e
 vagy hozzáér egy szörnyhez, akkor ide kerül vissza.
 szörnyek újraéledése todo
 
+Pause menü
+
+Végső menü
+
 pontozás:
+
+
