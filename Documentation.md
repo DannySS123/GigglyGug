@@ -2,10 +2,10 @@
 Az alap elképzelés egy 2D platformer játék volt, amiben néhány pálya található.
 A játék elkészítéséhez kellő építőelemek:
 
-### Menü:
-Alapvető szükséglet egy játékhoz a menü. Mi is beépítettük hát a játékunkba. Van egy alap menü, ami a játék indításakor jelenik meg, itt tudod elindítani a játékot, illetve van egy "in-game" menü, ahol újra tudod indítani a játékot az elejéről, vagy vissza tudsz lépni a menübe. Nyílván lehetőség van a játék folytatására is.
+### Menü (Dani):
+Alapvető szükséglet egy játékhoz a menü. Mi is beépítettük hát a játékunkba. Van egy alap menü, ami a játék indításakor jelenik meg, itt tudod elindítani a játékot, illetve van egy "in-game" menü, ahol újra tudod indítani a játékot az elejéről, vagy vissza tudsz lépni a menübe. Nyilván lehetőség van a játék folytatására is.
 
-### Karakter:
+### Karakter(Jónás):
 A karakter rajzát mi készítettük el, egy az interneten talált kép felhasználásával, amihez testet, illetve lábakat rajzoltunk.
 
 ### Mozgás (Dani, Zsombi):
@@ -22,8 +22,9 @@ Ehhez a hierarchiában a player alá kellett tenni.
 Emellett szerettük volna, ha a képernyőn emellett látszódnak az összegyűjtött
 eszközök, coinok, az eltelt idő, az életek száma.
 Ehhez egy canvas-t használtunk, aminek átlátszóan hagytuk a hátterét.
-pálya: A pályához egy tilemap-et használtunk, amihez a tile-okat egy letöltött assetből
-szereztük meg. (https://assetstore.unity.com/packages/2d/environments/nature-pixel-art-base-assets-free-151370). A pályák kialakításánál fő szempont volt, hogy minél változatosabban
+### Pálya (Jónás):
+A pályához egy tilemap-et használtunk, amihez a tile-okat egy letöltött assetből szereztük meg.
+(https://assetstore.unity.com/packages/2d/environments/nature-pixel-art-base-assets-free-151370). A pályák kialakításánál fő szempont volt, hogy minél változatosabban
 használjuk a meglévő elemeket, hogy ne legyen egysíkú a játék.
 Ehhez voltak eszközök az egyes szörnyek, a különböző hátteret díszítő elemek.
 A pálya kialakításához néhány helyen az egyes mezőket elforgattuk, átméreteztük, hogy ezzel is 
